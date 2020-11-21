@@ -159,13 +159,13 @@ CREATE TABLE PART_OF_LINEUP(
 
 CREATE TABLE ART_AWARDS(
     ArtistID    CHAR(200)    PRIMARY KEY,
-    Year        INT
+    Year        YEAR,
     Award        CHAR(200)
 );
 
 CREATE TABLE AWARDS(
     AwardID        CHAR(200)    PRIMARY KEY,
-    Insitution    CHAR(200)
+    Insitution    CHAR(200),
     Award        CHAR(200)
 );
 
@@ -222,12 +222,12 @@ CREATE TABLE PART_OF_LINEUP(
 
 CREATE TABLE ART_AWARDS(
 	ArtistID	CHAR(200)	PRIMARY KEY,
-	Year		INT	
+	Year		YEAR,	
 	Award		CHAR(200)
 );
 
 CREATE TABLE AWARDS(
 	AwardID		CHAR(200)	PRIMARY KEY,
-	Insitution	CHAR(200)	
+	Institution	CHAR(200),	
 	Award		CHAR(200)
 );
