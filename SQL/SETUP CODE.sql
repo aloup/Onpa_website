@@ -45,6 +45,12 @@ CREATE TABLE BAND_MEMBERS(
 	ArtistID	CHAR(200)
 );
 
+CREATE TABLE PRODUCERS(
+	ProducerID	CHAR(200)	PRIMARY KEY,
+	SongID		CHAR(200)
+);
+
+
 CREATE TABLE BAND(
 	BandID		CHAR(200)	PRIMARY KEY,
 	BandName	CHAR(200),
@@ -96,77 +102,6 @@ CREATE TABLE ALBUM(
 	Length TIMESTAMP,
 	Date	DATE,
 	Label	CHAR(200)
-);
-
-
-/* code from Jolie */
-
-CREATE TABLE BAND(
-    BandID        CHAR(200)    PRIMARY KEY,
-    BandName    CHAR(200),
-    YearCreated    YEAR
-);
-
-CREATE TABLE SONG_INSTRUMENT(
-    SongID        CHAR(200)    PRIMARY KEY,
-    Instrument    CHAR(200)
-);
-
-CREATE TABLE SONG_GENRE(
-    SongID        CHAR(200)    PRIMARY KEY,
-    Genre        CHAR(200)
-);
-
-CREATE TABLE PERFORMS(
-    ArtistID    CHAR(200)    PRIMARY KEY,
-    SongID        CHAR(200)
-);
-
-CREATE TABLE ARTIST_ID_VIDEO_ID(
-    ArtistID    CHAR(200)    PRIMARY KEY,
-    VideoID        CHAR(200)
-);
-
-CREATE TABLE DANCE_STYLE(
-    DanceID        CHAR(200)    PRIMARY KEY,
-    Style        CHAR(200)
-);
-
-CREATE TABLE CHOREOGRAPHS (
-    ChoreoArtistID    CHAR(200)    PRIMARY KEY,
-    ChoreoName    CHAR(200)
-);
-
-CREATE TABLE COMPRISES(
-    SongID        CHAR(200)    PRIMARY KEY,
-    AlbumID        CHAR(200)
-);
-
-CREATE TABLE GOES_ON(
-    ArtistID    CHAR(200)    PRIMARY KEY,
-    TourID        CHAR(200)
-);
-
-CREATE TABLE TOUR_DATE(
-    TourID        CHAR(200)    PRIMARY KEY,
-    Date        DATE
-);
-
-CREATE TABLE PART_OF_LINEUP(
-    SongID        CHAR(200)    PRIMARY KEY,
-    TourID        CHAR(200)
-);
-
-CREATE TABLE ART_AWARDS(
-    ArtistID    CHAR(200)    PRIMARY KEY,
-    Year        INT
-    Award        CHAR(200)
-);
-
-CREATE TABLE AWARDS(
-    AwardID        CHAR(200)    PRIMARY KEY,
-    Insitution    CHAR(200)
-    Award        CHAR(200)
 );
 
 
