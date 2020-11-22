@@ -19,8 +19,7 @@ INSERT INTO ARTIST
 			('A16', 'Alexey', 'Vorobyov', '1988-01-19', 'https://www.facebook.com/AlexeySparrow/', 'https://www.instagram.com/mr.alexsparrow/', 'https://twitter.com/alex_sparrow_', FALSE, FALSE, FALSE, TRUE, FALSE, NULL, NULL, NULL),
 			('A17', 'Nick', 'Carter', '1980-01-28', 'https://www.facebook.com/nickcarter/', 'https://www.instagram.com/nickcarter/', 'https://twitter.com/nickcarter', FALSE, FALSE, TRUE, TRUE, FALSE, 'E2', 'B5', 'Light-Lyric Tenor');
 
-/* NOT IN DATABASE YET */
-			
+	
 INSERT INTO STAGE_NAME
 	VALUES	('A2', 'FINNEAS'),
 			('A3', 'Lady Gaga'),
@@ -31,41 +30,42 @@ INSERT INTO STAGE_NAME
 			('A16', 'Alex Sparrow');
 			
 INSERT INTO MUSICIAN_INSTRUMENT
-	VALUES	('A8', 'Keyboard'),
-			('A8', 'Guitar'),
-			('A9', 'Guitar'),
-			('A13', 'Guitar'),
-			('A13', 'Keyboard');
-			
+	VALUES	(NULL, 'A8', 'Keyboard'),
+			(NULL, 'A8', 'Guitar'),
+			(NULL, 'A9', 'Guitar'),
+			(NULL, 'A13', 'Guitar'),
+			(NULL, 'A13', 'Keyboard');
+		
+
 INSERT INTO ART_ASSOC_ACTS
-	VALUES	('A1', 'A2'),
-			('A2', 'A1'),
-			('A5', 'A3'),
-			('A5', 'A16');
+	VALUES	(NULL, 'A1', 'A2'),
+			(NULL, 'A2', 'A1'),
+			(NULL, 'A5', 'A3'),
+			(NULL, 'A5', 'A16');
 			
 INSERT INTO ARTIST_GENRE
-	VALUES	('A1', 'Pop'),
-			('A1', 'Electropop'),
-			('A1', 'Dark pop'),
-			('A3', 'Pop'),
-			('A3', 'Dance'),
-			('A3', 'Electronic'),
-			('A6', 'Pop'),
-			('A6', 'Pop rock'),
-			('A8', 'Alternative rock'),
-			('A8', 'Pop rock'),
-			('A9', 'Rock'),
-			('A11', 'K-pop'),
-			('A11', 'K-hip hop'),
-			('A13', 'Alternative rock'),
-			('A14', 'R&B');
+	VALUES	(NULL, 'A1', 'Pop'),
+			(NULL, 'A1', 'Electropop'),
+			(NULL, 'A1', 'Dark pop'),
+			(NULL, 'A3', 'Pop'),
+			(NULL, 'A3', 'Dance'),
+			(NULL, 'A3', 'Electronic'),
+			(NULL, 'A6', 'Pop'),
+			(NULL, 'A6', 'Pop rock'),
+			(NULL, 'A8', 'Alternative rock'),
+			(NULL, 'A8', 'Pop rock'),
+			(NULL, 'A9', 'Rock'),
+			(NULL, 'A11', 'K-pop'),
+			(NULL, 'A11', 'K-hip hop'),
+			(NULL, 'A13', 'Alternative rock'),
+			(NULL, 'A14', 'R&B');
 			
 INSERT INTO BAND_MEMBERS
-	VALUES	('B1', 'A6'),
-			('B1', 'A8'),
-			('B2', 'A9'),
-			('B3', 'A13'),
-			('B4', 'A17');
+	VALUES	(NULL, 'B1', 'A6'),
+			(NULL, 'B1', 'A8'),
+			(NULL, 'B2', 'A9'),
+			(NULL, 'B3', 'A13'),
+			(NULL, 'B4', 'A17');
 			
 INSERT INTO BAND
 	VALUES 	('B1', 'Maroon 5', '1994'),
@@ -74,15 +74,15 @@ INSERT INTO BAND
 			('B4', 'Backstreet Boys', '1993');
 			
 INSERT INTO WRITERS_SONGS
-	VALUES 	('A1', 'S1'),
-			('A2', 'S1'),
-			('A3', 'S2'),
-			('A5', 'S2'),
-			('A6', 'S3'),
-			('A9', 'S4'),
-			('A11', 'S5'),
-			('A13', 'S6'),
-			('A14', 'S7');
+	VALUES 	(NULL, 'A1', 'S1'),
+			(NULL, 'A2', 'S1'),
+			(NULL, 'A3', 'S2'),
+			(NULL, 'A5', 'S2'),
+			(NULL, 'A6', 'S3'),
+			(NULL, 'A9', 'S4'),
+			(NULL, 'A11', 'S5'),
+			(NULL, 'A13', 'S6'),
+			(NULL, 'A14', 'S7');
 			
 INSERT INTO SONG
 	VALUES 	('S1', 'bury a friend', '0:03:13'),
@@ -94,13 +94,13 @@ INSERT INTO SONG
 			('S7', 'Single Ladies (Put a Ring on It)', '0:03:13');
 			
 INSERT INTO SONG_LANG
-	VALUES 	('S1', 'English'),
-			('S2', 'English'),
-			('S3', 'English'),
-			('S4', 'English'),
-			('S5', 'Korean'),
-			('S6', 'English'),
-			('S7', 'English');
+	VALUES 	(NULL, 'S1', 'English'),
+			(NULL, 'S2', 'English'),
+			(NULL, 'S3', 'English'),
+			(NULL, 'S4', 'English'),
+			(NULL, 'S5', 'Korean'),
+			(NULL, 'S6', 'English'),
+			(NULL, 'S7', 'English');
 			
 			
 INSERT INTO VIDEO
@@ -108,9 +108,174 @@ INSERT INTO VIDEO
 			('V2', 'Bad Romance', '0:05:08', 'Bad Romance'),
 			('V3', 'Maps', '0:03:28', NULL),
 			('V4', 'Bed of Roses', '0:06:42', NULL),
-			('V5', 'GANGNAM STYLE(강남스타일)', '0:04:12', 'Gangnam Style'),
+			('V5', 'GANGNAM STYLE', '0:04:12', 'Gangnam Style'),
 			('V6', 'Here It Goes Again', '0:03:05', 'Here It Goes Again'),
-			('V7	Single Ladies (Put a Ring on It)	0:03:18	Single Ladies
+			('V7', 'Single Ladies (Put a Ring on It)', '0:03:18', 'Single Ladies');
+			
+		
+INSERT INTO VIDEO_FOR_SONG
+	VALUES	('V1', 'S1'),
+			('V2', 'S2'),
+			('V3', 'S3'),
+			('V4', 'S4'),
+			('V5', 'S5'),
+			('V6', 'S6'),
+			('V7', 'S7');
+			
+INSERT INTO PLATFORM
+	VALUES	('https://youtu.be/HUHC9tYz8ik', 'YouTube', '2019-01-30'),
+			('https://youtu.be/qrO4YZeyl0I', 'YouTube', '2009-11-24'),
+			('https://youtu.be/NmugSMBh_iI', 'YouTube', '2014-07-02'),
+			('https://youtu.be/NvR60Wg9R7Q', 'YouTube', '2009-06-16'),
+			('https://youtu.be/9bZkp7q19f0', 'YouTube', '2012-07-15'),
+			('https://youtu.be/dTAAsCNK7RA', 'YouTube', '2009-02-26'),
+			('https://youtu.be/4m1EFMoRFvY', 'YouTube', '2009-10-2');
+			
+INSERT INTO VIDEO_LINKS
+	VALUES 	('V1', 'https://youtu.be/HUHC9tYz8ik'),
+			('V2', 'https://youtu.be/qrO4YZeyl0I'),
+			('V3', 'https://youtu.be/NmugSMBh_iI'),
+			('V4', 'https://youtu.be/NvR60Wg9R7Q'),
+			('V5', 'https://youtu.be/9bZkp7q19f0'),
+			('V6', 'https://youtu.be/dTAAsCNK7RA'),
+			('V7', 'https://youtu.be/4m1EFMoRFvY');
+			
+INSERT INTO ALBUM
+	VALUES 	('AL1', 'WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?', '0:42:00', '2019-03-29', 'Interscope'),
+			('AL2', 'The Fame Monster', '1:28:00', '2009-11-18', 'Interscope'),
+			('AL3', 'V', '0:40:10', '2014-08-29', 'Interscope'),
+			('AL4', 'Keep the Faith', '1:06:10', '1992-11-03', 'Mercury'),
+			('AL5', 'Psy 6 (Six Rules), Part 1', '0:22:37', '2012-07-15', 'YG Entertainment'),
+			('AL6', 'Oh No', '0:41:40', '2005-08-30', 'Capitol'),
+			('AL7', 'I Am... Sasha Fierce', '0:41:36', '2008-11-12', 'Columbia');
+			
+INSERT INTO AWARDS
+	VALUES 	('AW1', 'AMA', 'New Artist of the Year'),
+			('AW2', 'AMA', 'Favourite Alternative Artist'),
+			('AW3', 'Grammy', 'Record of the Year'),
+			('AW4', 'Academy Awards', 'Best Original Song');
+			
+INSERT INTO ART_AWARDS
+	VALUES 	(NULL, 'A1', '2019', 'AW1'),
+			(NULL, 'A1', '2019', 'AW2'),
+			(NULL, 'A2', '2020', 'AW3'),
+			(NULL, 'A3', '2019', 'AW4');
+			
+/* NOT IN DATABASE YET */
+			
+INSERT INTO PART_OF_LINEUP
+	VALUES	(NULL, 'S1', 'T1'),
+			(NULL, 'S2', 'T2'),
+			(NULL, 'S4', 'T3'),
+			(NULL, 'S5', 'T4');
+
+INSERT INTO TOUR_DATE
+	VALUES 	(NULL, 'T1', '2019-04-13'),
+			(NULL, 'T1', '2019-04-20'),
+			(NULL, 'T2', '2012-04-27'),
+			(NULL, 'T2', '2012-05-02'),
+			(NULL, 'T3', '1993-06-24'),
+			(NULL, 'T3', '1993-06-25'),
+			(NULL, 'T4', '2018-12-22'),
+			(NULL, 'T4', '2018-09-08');
+			
+INSERT INTO GOES_ON	
+	VALUES 	(NULL, 'A1', 'T1'),
+			(NULL, 'A3', 'T2'),
+			(NULL, 'A9', 'T3'),
+			(NULL, 'A11', 'T4');
+			
+INSERT INTO COMPRISES
+	VALUES 	(NULL, 'S1', 'AL1'),
+			(NULL, 'S2', 'AL2'),
+			(NULL, 'S3', 'AL3'),
+			(NULL, 'S4', 'AL4'),
+			(NULL, 'S5', 'AL5'),
+			(NULL, 'S6', 'AL6'),
+			(NULL, 'S7', 'AL7');
+			
+INSERT INTO CHOREOGRAPHS
+	VALUES 	(NULL, 'A4', 'Bad Romance'),
+			(NULL, 'A10', 'Gangnam Style'),
+			(NULL, 'A12', 'Here It Goes Again'),
+			(NULL, 'A15', 'Single Ladies');
+			
+INSERT INTO DANCE_STYLE
+	VALUES 	(NULL, 'Bad Romance', 'Pop'),
+			(NULL, 'Gangnam Style', 'Hip hop'),
+			(NULL, 'Gangnam Style', 'Viral'),
+			(NULL, 'Here It Goes Again', 'Experimental'),
+			(NULL, 'Single Ladies', 'J-Setting'),
+			(NULL, 'Single Ladies', 'Urban');
+			
+INSERT INTO ARTIST_ID_VIDEO_ID
+	VALUES 	(NULL, 'A1', 'V1'),
+			(NULL, 'A3', 'V2'),
+			(NULL, 'A6', 'V3'),
+			(NULL, 'A8', 'V3'),
+			(NULL, 'A9', 'V4'),
+			(NULL, 'A11', 'V5'),
+			(NULL, 'A13', 'V6'),
+			(NULL, 'A14', 'V7');
+			
+INSERT INTO PRODUCES
+	VALUES 	(NULL, 'A2', 'S1'),
+			(NULL, 'A3', 'S2'),
+			(NULL, 'A5', 'S2'),
+			(NULL, 'A7', 'S3'),
+			(NULL, 'A11', 'S5'),
+			(NULL, 'A14', 'S7');
+			
+INSERT INTO PERFORMS
+	VALUES 	(NULL, 'A1', 'S1'),
+			(NULL, 'A3', 'S2'),
+			(NULL, 'A6', 'S3'),
+			(NULL, 'A8', 'S3'),
+			(NULL, 'A9', 'S4'),
+			(NULL, 'A11', 'S5'),
+			(NULL, 'A13', 'S6'),
+			(NULL, 'A14', 'S7');
+			
+INSERT INTO SONG_GENRE
+	VALUES 	(NULL, 'S1', 'Electronica'),
+			(NULL, 'S1', 'Electropop'),
+			(NULL, 'S1', 'Synth-pop'),
+			(NULL, 'S2', 'Electropop'),
+			(NULL, 'S2', 'Dance-pop'),
+			(NULL, 'S3', 'Pop rock'),
+			(NULL, 'S4', 'Rock'),
+			(NULL, 'S5', 'K-pop'),
+			(NULL, 'S5', 'Dance-pop'),
+			(NULL, 'S6', 'Alternative rock'),
+			(NULL, 'S7', 'R&B');
+			
+INSERT INTO SONG_INSTRUMENT
+	VALUES 	(NULL, 'S1', 'Synthesizer'),
+			(NULL, 'S2', 'Synthesizer'),
+			(NULL, 'S3', 'Synthesizer'),
+			(NULL, 'S3', 'Bass guitar'),
+			(NULL, 'S3', 'Guitar'),
+			(NULL, 'S3', 'Drums'),
+			(NULL, 'S3', 'Keyboard'),
+			(NULL, 'S4', 'Guitar'),
+			(NULL, 'S4', 'Keyboard'),
+			(NULL, 'S4', 'Drums'),
+			(NULL, 'S4', 'Bass guitar'),
+			(NULL, 'S6', 'Guitar'), 
+			(NULL, 'S6', 'Bass guitar'),
+			(NULL, 'S6', 'Drums');
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			
 			
