@@ -60,6 +60,16 @@ $b_title=$_GET['b_title'];
 
 <button type="submit" name="submit" onclick="return confirm('Are you sure you want to submit?');">Submit</button>
 
+<h3> Artist Genre </h3>
+
+<form action="edit_record.php?b_title=<?php echo $b_title;?>" method="POST">
+
+<?php echo $b_title;?><br>
+
+<label> Musician Instruments  <b style="color:red">*</b></label>
+<input type="text" name="minstrument" required><br>
+
+<button type="submit" name="submit" onclick="return confirm('Are you sure you want to submit?');">Submit</button>
   
 </form>
 </div>
