@@ -69,6 +69,11 @@
 		  <input type="file" name="fileToUpload" id="fileToUpload">
 		  <input type="submit" value="Upload Video" name="submit">
 		</form>
+		 <table style="width:100%">
+		 <tr>
+			<th>Video name </th>
+			<th>Video</th>
+		 </tr>
 		<?php 
 			include "connection.php";
     
