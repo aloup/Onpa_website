@@ -35,6 +35,7 @@ $sql = INSERT INTO `ARTIST_GENRE` (`ID`, `ArtistID`, `Genre`) VALUES
 (14, 13, 'Alternative rock'),
 (15, 14, 'R&B');
 
+
 $sql = INSERT INTO `ARTIST` (`ArtistID`, `FirstName`, `LastName`, `DateOfBirth`, `Facebook`, `Instagram`, `Twitter`, `MusFlag`, `VocFlag`, `TopRange`, `BottomRange`, `VoiceType`) VALUES
 (1, 'Billie', 'Eilish', '2001-12-18', 'https://www.facebook.com/billieeilish', 'https://www.instagram.com/billieeilish/', 'https://twitter.com/billieeilish', 0, 1, 'D3', 'G5', 'Soprano'),
 (2, 'Finneas', 'O\'Connell', '1997-07-30', 'https://www.facebook.com/FINNEASOFFICIAL', 'https://www.instagram.com/finneas/', 'https://twitter.com/finneas', 0, 1, 'E2', 'F5', 'Baritone'),
@@ -59,6 +60,23 @@ $sql = INSERT INTO `BAND` (`BandID`, `BandName`, `YearCreated`) VALUES
 ('B2', 'Bon Jovi', 1983),
 ('B3', 'OK Go', 1998),
 ('B4', 'Backstreet Boys', 1993);
+
+
+$sql = INSERT INTO `BAND_MEMBERS` (`ID`, `BandID`, `ArtistID`) VALUES
+(1, 'B1', 6),
+(2, 'B1', 8),
+(3, 'B2', 9),
+(4, 'B3', 13),
+(5, 'B4', 17);
+
+$sql = INSERT INTO `MUSICIAN_INSTRUMENT` (`ID`, `MusicianID`, `Instrument`) VALUES
+(1, 8, 'Keyboard'),
+(2, 8, 'Guitar'),
+(3, 9, 'Guitar'),
+(4, 13, 'Guitar'),
+(5, 13, 'Keyboard');
+
+
 // Executing SQL query
 if(mysqli_query($conn, $sql))
 {
