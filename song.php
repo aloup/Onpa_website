@@ -1,3 +1,14 @@
+<!doctype html>
+<?php
+    include "connection.php";
+    
+    // Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);		// Upload information here
+	
+	// Check connection
+	if ($conn->connect_error){
+		die("Connection failed: " . $conn->connect_error);
+	}
 <html>
 <head>
    <title>Edit record</title>
@@ -46,8 +57,6 @@ $b_title=$_GET['b_title'];
 <input type="text" name="sinstrument" required><br>
 
 <button type="submit" name="submit" onclick="return confirm('Are you sure you want to submit?');">Submit</button>
-
-
 
 
 <h3> Song Language </h3>
